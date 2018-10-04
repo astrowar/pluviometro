@@ -139,5 +139,6 @@ def processing():
     reset_arduino_counters()
 
 
-processing()
-call("sudo nohup shutdown -h now", shell=True)
+if __name__ == "__main__":
+    processing()
+    call("sudo nohup shutdown -h now", shell=True)
